@@ -79,14 +79,14 @@ export default function CustomData() {
 
 
   const handleSubmit = useCallback(() => {
-    const guna1 = input1;
-    const guna2 = input2;
+    const price1 = input1;
+    const price2 = input2;
 
-    // Check if input1, input2, and input3 have valid values
-    if (guna1 >= 0) {
-      // Update the price ranges based on inputs
+
+    if (price1 >= 0) {
+
       setPriceRanges([
-        { min: guna1, max: guna2 },
+        { min: price1, max: price2 },
       ]);
 
       // Set state to show the table
@@ -168,7 +168,6 @@ const ordertableRows = Object.entries(orderBreakdown).map(([momentsCount, count]
 
 const ordertableHeadings = ['Description', 'Order Count', 'Average Price'];
 
-// Add the total average price row
 const totalAveragePriceRow = ['Total', totalOrdersCount, totalAveragePrice.toFixed(2)];
 ordertableRows.push(totalAveragePriceRow);
 
@@ -204,7 +203,7 @@ ordertableRows.push(totalAveragePriceRow);
     };
   });
 
-  // Create an array for the table rows for average visits
+  // An array for the table rows for average visits
   const averageVisitsTableRows = averageVisits.map((item) => [
     `${item.priceRange}`,
     item.averageVisits,
@@ -224,7 +223,7 @@ ordertableRows.push(totalAveragePriceRow);
               <Text as="p" variant="bodyMd">
                 You Are Viewing Analysis Page Which Contains Two Sections.
                 Section 1 : Table Consists of Vist to Orders Breadown Data Analaysis
-                Section 2 : Submit Three Prices To View Average Visits Within Price Range
+                Section 2 : Submit Two Prices To View Average Visits Within Price Range
               </Text>
             </VerticalStack>
           </Card>
