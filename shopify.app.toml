@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "orderAnalytics"
+client_id = "c488d17c7612c4eb03da486f462aeb90"
+application_url = "https://conditional-jews-bleeding-highway.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders, read_customers"
+
+[auth]
+redirect_urls = [
+  "https://conditional-jews-bleeding-highway.trycloudflare.com/auth/callback",
+  "https://conditional-jews-bleeding-highway.trycloudflare.com/auth/shopify/callback",
+  "https://conditional-jews-bleeding-highway.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "gunatest.myshopify.com"
