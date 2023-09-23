@@ -1,5 +1,6 @@
 node_modules
 
+/fly.toml
 /.cache
 /build
 /app/build
